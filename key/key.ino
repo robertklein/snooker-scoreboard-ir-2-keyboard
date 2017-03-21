@@ -38,7 +38,7 @@ void loop(void) {
   if(sended == 1) {
     //DigiUSB.println(Data_back, DEC);
     DigiKeyboard.sendKeyStroke(0);
-    DigiKeyboard.print(Data_back, HEX);
+    //DigiKeyboard.print(Data_back, HEX);
     //DigiKeyboard.print(Data_back, DEC);
     
     // LG - na smartfone apka
@@ -73,27 +73,27 @@ void loop(void) {
 
 
     // Aliexpress mini | Genius RB repro
-    if(Data_back == 0x1A) DigiKeyboard.print("z");
-    if(Data_back == 0x9A) DigiKeyboard.print("x");
-    if(Data_back == 0xA2) DigiKeyboard.print("c");
-    if(Data_back == 0x22) DigiKeyboard.print("v");
-    if(Data_back == 0x2A) DigiKeyboard.print("b");
-    if(Data_back == 0xAA) DigiKeyboard.print("n");
-    if(Data_back == 0x92) DigiKeyboard.print("m");
+    if(Data_back == 0x1A || Data_back == 0x80)  DigiKeyboard.print("z");
+    if(Data_back == 0x9A || Data_back == 0x78)  DigiKeyboard.print("x");
+    if(Data_back == 0xA2 || Data_back == 0xC0)  DigiKeyboard.print("c");
+    if(Data_back == 0x22 || Data_back == 0x20)  DigiKeyboard.print("v");
+    if(Data_back == 0x2A || Data_back == 0xA0)  DigiKeyboard.print("b");
+    if(Data_back == 0xAA || Data_back == 0x60)  DigiKeyboard.print("n");
+    if(Data_back == 0x92 || Data_back == 0xE0)  DigiKeyboard.print("m");
     // FOULS
-    if(Data_back == 0xA) DigiKeyboard.print(",");
-    if(Data_back == 0x8A)  DigiKeyboard.print(".");
-    if(Data_back == 0xB2)  DigiKeyboard.print("/");
-    if(Data_back == 0x32)  DigiKeyboard.print("]");
+    if(Data_back == 0xA  || Data_back == 0x10) DigiKeyboard.print(",");
+    if(Data_back == 0x8A || Data_back == 0x90) DigiKeyboard.print(".");
+    if(Data_back == 0xB2 || Data_back == 0x50) DigiKeyboard.print("/");
+    if(Data_back == 0x32 || Data_back == 0xD0)  DigiKeyboard.print("]");
     // CHANGE PLAYER
-    if(Data_back == 0x2) DigiKeyboard.print(" ");
+    if(Data_back == 0x2  || Data_back == 0x70) DigiKeyboard.print(" ");
     // BACK
-    if(Data_back == 0x3A)  DigiKeyboard.print("=");
+    if(Data_back == 0x3A || Data_back == 0x30) DigiKeyboard.print("=");
     // NEXT FRAME
-    if(Data_back == 0x82)  DigiKeyboard.println("");
+    if(Data_back == 0x82 || Data_back == 0xF8)  DigiKeyboard.println("");
     // ADD BALL - REMOVE BALL
-    if(Data_back == 0x28)  DigiKeyboard.print("9");
-    if(Data_back == 0x8)  DigiKeyboard.print("0");
+    if(Data_back == 0x28 || Data_back == 0x40)  DigiKeyboard.print("9");
+    if(Data_back == 0x8  || Data_back == 0xC8)  DigiKeyboard.print("0");
     // APPLAUSE
     if(Data_back == 0x30)  DigiKeyboard.print("1");
     if(Data_back == 0xB0)  DigiKeyboard.print("2");
