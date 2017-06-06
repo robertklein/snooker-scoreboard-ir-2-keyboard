@@ -146,7 +146,7 @@ void loop(void) {
       digitalWrite(0,LOW);
     }
     
-    DigiKeyboard.delay(250);
+    //DigiKeyboard.delay(250);
     
     sended = 0;
   } else {
